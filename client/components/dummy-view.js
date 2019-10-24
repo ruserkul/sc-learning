@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import Head from './head'
@@ -15,9 +15,12 @@ const Dummy = (props) => {
   return (
     <div>
       <Head title="Hello" />
-      <div> {JSON.stringify(props.isRequesting)}</div>
+      {/* <div> {JSON.stringify(props.isRequesting)}</div> */}
       <div> Hello World {counter} </div>
-      <div> Page {pageIndex} </div>
+      <Link to="/dashboard"> GO DASHBOARD</Link>
+      <br />
+      <a href="/dashboard">Go to Google</a>
+      <div> Page {pageIndex + 1} {props.users.length} </div>
       <div>
         <table>
           <tr>

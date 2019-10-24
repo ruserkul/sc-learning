@@ -100,6 +100,7 @@ server.get('/tracker/:userId.gif', (req, res) => {
 
 server.get('/api/users/:pageIndex', (req, res) => {
   const { pageIndex } = req.params
+  // const { pageTotal } = req.params
   const fileName = `${__dirname}/tmp/data.json`;
   fs.readFile(
     fileName,
